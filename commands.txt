@@ -1,0 +1,1 @@
+du -h -d 1 Ex_Files_React_EssT .git
