@@ -10,7 +10,8 @@ module.exports = {
 	devServer: {
 		inline: true,
 		contentBase: './dist',
-		port: 3000
+		port: 8080,
+    host: '0.0.0.0'
 	},
 	module: {
 		loaders: [
@@ -29,11 +30,11 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				loader: 'style-loader!css-loader!autoprefixer-loader'
+				loader: 'style-loader!css-loader!postcss-loader'
 			},
 			{
 				test: /\.scss$/,
-				loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
+				loader: 'style-loader!css-loader!postcss-loader!sass-loader'
 			}
 		]
 	}
